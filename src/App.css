@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+    /* Custom Colors */
+    --color-primary-fixed-dim: #00dbe7;
+    --color-surface: #0c1324;
+    --color-on-surface-variant: #b9cacb;
+    --color-on-surface: #dce1fb;
+    --color-surface-dim: #0c1324;
+    --color-on-primary-container: #006a71;
+    --color-tertiary-fixed-dim: #b9c7e4;
+    --color-surface-container-low: #151b2d;
+    --color-on-secondary: #053900;
+    --color-secondary: #d7ffc5;
+    --color-on-error-container: #ffdad6;
+    --color-on-secondary-fixed-variant: #095300;
+    --color-on-tertiary: #233148;
+    --color-outline: #849495;
+    --color-surface-tint: #00dbe7;
+    --color-error: #ffb4ab;
+    --color-surface-container-highest: #2e3447;
+    --color-inverse-primary: #00696f;
+    --color-inverse-surface: #dce1fb;
+    --color-surface-container: #191f31;
+    --color-secondary-container: #2ff801;
+    --color-on-tertiary-container: #526079;
+    --color-outline-variant: #3a494b;
+    --color-background: #0c1324;
+    --color-on-background: #dce1fb;
+    --color-on-primary: #00363a;
+    --color-primary: #e1fdff;
+    --color-tertiary-fixed: #d6e3ff;
+    --color-primary-container: #00f2ff;
+    --color-primary-fixed: #74f5ff;
+    --color-surface-container-high: #23293c;
+    --color-on-secondary-fixed: #022100;
+    --color-tertiary-container: #cddbf9;
+    --color-on-primary-fixed-variant: #004f54;
+    --color-on-tertiary-fixed-variant: #39475f;
+    --color-tertiary: #f6f7ff;
+    --color-error-container: #93000a;
+    --color-on-error: #690005;
+    --color-on-secondary-container: #0f6d00;
+    --color-surface-bright: #33394c;
+    --color-on-primary-fixed: #002022;
+    --color-secondary-fixed: #79ff5b;
+    --color-surface-container-lowest: #070d1f;
+    --color-on-tertiary-fixed: #0d1c32;
+    --color-inverse-on-surface: #2a3043;
+    --color-surface-variant: #2e3447;
+    --color-secondary-fixed-dim: #2ae500;
+
+    /* Custom Border Radius */
+    --radius-card: 1.25rem;
+
+    /* Keyframes for Wobble & Shake */
+    @keyframes wobble {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-3deg);
+        }
+
+        75% {
+            transform: rotate(3deg);
+        }
+    }
+
+    @keyframes shake {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-2px);
+        }
+
+        75% {
+            transform: translateX(2px);
+        }
+    }
+}
+
+/* Custom CSS Classes */
+.advice-card-shadow {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Applying the animations on hover */
+.btn-hover-fx:hover {
+    animation: wobble 0.3s ease-in-out infinite, shake 0.2s ease-in-out infinite;
+}
