@@ -1,0 +1,33 @@
+# Project Requirements and Dependencies: Advice-App
+
+## 1. System Requirements
+- **Node.js**: Version 18.0.0 or higher (required for Vite 8 and React 19).
+- **Package Manager**: pnpm (recommended, as a `pnpm-lock.yaml` is present), but npm or yarn will also work.
+
+## 2. Production Dependencies
+These are required for the application to function in production:
+- **axios** (^1.14.0): For making HTTP requests to the Advice Slip API.
+- **react** (^19.2.4): The core React library.
+- **react-dom** (^19.2.4): React's entry point to the DOM.
+
+## 3. Development Dependencies
+These are used during development and the build process:
+- **vite** (^8.0.4): The build tool and development server.
+- **tailwindcss** (^4.2.2): Utility-first CSS framework.
+- **@tailwindcss/vite** (^4.2.2): Vite plugin for Tailwind CSS.
+- **@vitejs/plugin-react** (^6.0.1): Vite plugin for React support.
+- **eslint** (^9.39.4): For code linting and maintaining code quality.
+- **autoprefixer** (^10.4.27): Parses CSS and adds vendor prefixes.
+- **postcss** (^8.5.8): Tool for transforming CSS with JavaScript.
+- **@types/react** & **@types/react-dom**: TypeScript type definitions for React.
+
+## 4. External Services and Resources
+The app relies on the following external resources:
+- **API**: [Advice Slip API](https://api.adviceslip.com/advice) - Used to fetch random advice.
+- **Fonts**: [Google Fonts (Inter)](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap) - Primary typography.
+- **Icons**: [Material Symbols Outlined](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap) - Used for UI icons.
+- **Assets**: External background image hosted on Google's CDN.
+
+## 5. Configuration Notes
+- **Base Path**: The project is configured with a base path of `/Advice-App`, likely for deployment on GitHub Pages.
+- **Type**: The project is a Node.js module (`"type": "module"` in package.json).
